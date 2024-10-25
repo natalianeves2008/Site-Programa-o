@@ -2,6 +2,14 @@ body {
     background-color: beige;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
+.cartao {
+    margin: 1rem 1rem;
+    background-color: aliceblue;
+    height: 20rem;
+    flex-grow: 1;
+    flex-basis: calc(33% - 6rem);
+}
+
 footer {
     background-color: black;
     color: white;
@@ -10,6 +18,8 @@ footer {
     width: 100%;
     height: 2rem;
 }
+
+
 footer p {
     text-align: center;
     font-size: 0,6rem;
