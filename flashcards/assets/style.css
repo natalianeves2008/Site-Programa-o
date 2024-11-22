@@ -1,66 +1,78 @@
-:root {
-    --cor-fundo: #2f3436;
-    --cor-texto: #ffffff; 
-    --cor-destaque: #34c759;
-    --cor-cartao: #454f55;
-  }
-  
-  body {
-    background-color: var(--cor-fundo);
-    font-family: 'Bai Jamjuree', sans-serif;
-  }
-  
-  footer {
-    background-color: var(--cor-destaque);
-    color: var(--cor-texto);
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 2rem;
-    text-align: center;
-  }
-  
-  footer p {
-    font-size: 0.6rem;
-    margin-top: 0.5rem;
-  }
-  
-  #container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    padding: 1rem;
-  }
-  
-  .cartao {
-    background-color: var(--cor-cartao);
-    height: 20rem;
-    flex: 1 1 calc(33% - 2rem);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 1rem;
-    box-sizing: border-box;
-    border-radius: 1rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .cartao_conteudo {
-    text-align: center;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .cartao_conteudo h3 {
-    background-color: var(--cor-destaque);
-    text-align: left;
-    padding: 0.5rem;
-    margin: 0;
-    border-radius: 0.6rem;
-    font-size: 1vw;
-    position: relative;
-    color: var(--cor-texto);
-  }
+body {
+  background-color: bisque; /* Definido como cor principal */
+  color: goldenrod; /* Cor do texto */
+  font-family: 'Bai Jamjuree', sans-serif; /* Correção do nome da fonte */
+}
+
+/* Estilização do rodapé */
+footer {
+  background-color: black; /* Cor de fundo final para o rodapé */
+  color: aliceblue; /* Cor do texto */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 2rem; /* Altura padrão do rodapé */
+}
+
+footer p {
+  text-align: center;
+  font-size: 0.8rem; /* Ajuste de tamanho de texto */
+  margin-top: 0.5rem; /* Espaço interno */
+}
+
+/* Container principal */
+#container {
+  display: flex; /* Define layout flexível */
+  gap: 1rem; /* Espaçamento entre elementos */
+  padding: 1rem;
+}
+
+/* Estilo dos cartões */
+.cartao {
+  margin: 1rem; /* Espaçamento ao redor do cartão */
+  background-color: wheat;
+  height: 20rem;
+  flex-basis: calc(33% - 2rem); /* Divide o espaço em 3 partes */
+}
+
+.cartao_conteudo {
+  background-color: var(--card-front-color, slategrey); /* Cor com fallback */
+  text-align: center;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 300ms ease-in-out;
+  position: relative; /* Necessário para posicionamento dos elementos */
+}
+
+.cartao_conteudo h3 {
+  background-color: beige;
+  color: var(--text-color, black); /* Cor com fallback */
+  border: 1px solid var(--text-color, black);
+  text-align: left;
+  padding: 0.5rem;
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  backface-visibility: hidden; /* Para efeito 3D */
+}
+
+.cartao_conteudo_pergunta,
+.cartao_conteudo_resposta {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%; /* Corrige largura para evitar overflow */
+}
+
+.cartao_conteudo_resposta {
+  transform: rotateY(180deg); /* Define rotação */
+}
+
+.cartao_conteudo p {
+  margin-top: 1rem;
+  padding: 2rem;
+}
