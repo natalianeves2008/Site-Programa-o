@@ -1,23 +1,23 @@
 criaCartao(
     'Programação',
-    'O que é Python?',
-    'O Python é uma linguagem de programação'
-)
-
-criaCartao(
-    'Geografia',
-    'Qual a capital da França?',
-    'A capital da França é Paris'
-)
+    'O que é um algoritmo?',
+    'Um algoritmo é uma sequência de passos para resolver um problema ou executar uma tarefa.'
+);
 
 criaCartao(
     'Programação',
-    'O que é uma função?',
-    'Uma função é um bloco de código que executa alguma tarefa'
-)
+    'O que é uma variável?',
+    'Uma variável é um espaço na memória que armazena dados para serem usados em um programa.'
+);
 
 criaCartao(
-    'Lingua inglesa',
-    'Como se diz oi em Inglês?',
-    'Oi em ingles é HI (RAI)'
-)
+    'Sociologia',
+    'O que é cultura?',
+    'Cultura é o conjunto de hábitos, crenças, valores e costumes compartilhados por um grupo social.'
+);
+
+criaCartao(
+    'Sociologia',
+    'O que é sociedade?',
+    'Sociedade é um grupo de indivíduos que compartilham um território e interagem de forma organizada.'
+);
